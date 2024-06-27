@@ -1,21 +1,17 @@
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-// import Offcanvas from "react-bootstrap/Offcanvas";
+import React from "react";
+import { Container, Navbar } from "react-bootstrap";
 import SearchBar from "./SearchBar";
-function NavBar({ onSearch }) {
+
+const NavBar = ({ onSearch }) => {
   return (
-    <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container fluid>
-          <Navbar.Brand href="#">User List</Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <SearchBar onSearch={onSearch} />
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+    <Navbar expand="lg" className="bg-body-tertiary px-3">
+      <Container fluid>
+        <Navbar.Brand href="#">User List</Navbar.Brand>
+
+        <SearchBar onSearch={onSearch} />
+      </Container>
+    </Navbar>
   );
-}
+};
 
 export default NavBar;

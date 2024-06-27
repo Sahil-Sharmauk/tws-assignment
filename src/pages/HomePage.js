@@ -4,6 +4,7 @@ import UserList from "../components/UserList";
 import CustomPagination from "../components/CustomPagination";
 import SortButton from "../components/SortButton";
 import NavBar from "../components/Navbar";
+import { Container } from "react-bootstrap";
 const HomePage = () => {
   const {
     data: users,
@@ -45,17 +46,19 @@ const HomePage = () => {
   return (
     <div>
       <NavBar onSearch={setSearchQuery} />
-      <UserList users={paginatedUsers}>
+      <UserList users={paginatedUsers} className="px-3">
         <SortButton
           onSort={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
           sortOrder={sortOrder}
         />
       </UserList>
-      <CustomPagination
-        totalPages={totalPages}
-        currentPage={currentPage}
-        onPageChange={setCurrentPage}
-      />
+      <Container className="pagination-container">
+        <CustomPagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          onPageChange={setCurrentPage}
+        />
+      </Container>
     </div>
   );
 };

@@ -3,11 +3,11 @@ body {
 }
 
 
-.pagination {
+/* .pagination {
   display: flex;
   justify-content: center;
   /* margin: 20px 0; */
-}
+/* }
 
 
 .user-details {
@@ -18,5 +18,19 @@ body {
 
 .user-details p {
   margin: 8px 0;
+} */ */
+
+
+.centered-user-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust height as needed */
 }
 
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}

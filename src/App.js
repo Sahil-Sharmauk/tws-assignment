@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import UserDetails from "./pages/UserDetailsPage";
+import NotFound from "./components/NotFound";
 export default function App() {
   console.log("Router");
   const router = createBrowserRouter([
@@ -10,9 +10,10 @@ export default function App() {
       element: <HomePage />,
     },
     {
-      path: "/user/:id",
-      element: <UserDetails />,
+      path: "*",
+      element: <NotFound />,
     },
+
   ]);
 
   return <RouterProvider router={router}></RouterProvider>;
