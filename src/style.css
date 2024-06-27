@@ -1,7 +1,9 @@
 body {
   font-family: Arial, sans-serif;
 }
-
+.search-bar {
+  border-radius: 10px;
+}
 .centered-user-list {
   display: flex;
   justify-content: center;

@@ -6,7 +6,9 @@ const NavBar = ({ onSearch }) => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary px-3">
       <Container fluid>
-        <Navbar.Brand href="#">User List</Navbar.Brand>
+        <Navbar.Brand href="#">
+          <h2>User List</h2>
+        </Navbar.Brand>
 
         <SearchBar onSearch={onSearch} />
       </Container>
