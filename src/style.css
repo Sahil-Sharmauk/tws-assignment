@@ -31,9 +31,3 @@ body {
 }
 
 
-@media (max-width:996px) { /* Bootstrap's breakpoint for lg screens */
-  .brand-title {
-    text-align: center;
-    width: 100%;
-  }
-}
