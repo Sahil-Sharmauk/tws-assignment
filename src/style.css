@@ -14,5 +14,26 @@ body {
 .pagination-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+}
+
+
+.table-responsive {
+  min-width: 350px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.navbar {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+@media (max-width:996px) { /* Bootstrap's breakpoint for lg screens */
+  .brand-title {
+    text-align: center;
+    width: 100%;
+  }
 }
