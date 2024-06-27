@@ -17,7 +17,7 @@ const HomePage = () => {
   const [sortOrder, setSortOrder] = useState("asc");
   const [noUsersFound, setNoUsersFound] = useState(false);
 
-  const pageSize = 2;
+  const pageSize = 10;
 
   const filteredUsers = useMemo(() => {
     const result = users.filter((user) => {
