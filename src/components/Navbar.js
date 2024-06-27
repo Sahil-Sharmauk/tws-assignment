@@ -1,29 +1,21 @@
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import Offcanvas from "react-bootstrap/Offcanvas";
-
-function OffcanvasExample({ children }) {
+// import Offcanvas from "react-bootstrap/Offcanvas";
+import SearchBar from "./SearchBar";
+function NavBar({ onSearch }) {
   return (
     <>
-      <Navbar key={"md"} expand={"md"} className="bg-body-tertiary mb-3">
+      <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Navbar.Brand href="#">User List</Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${"md"}`} />
-          <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-${"md"}`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-${"md"}`}
-            placement="end">
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${"md"}`}>
-                Offcanvas
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>{children}</Offcanvas.Body>
-          </Navbar.Offcanvas>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <SearchBar onSearch={onSearch} />
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </>
   );
 }
 
-export default OffcanvasExample;
+export default NavBar;

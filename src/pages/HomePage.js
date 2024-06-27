@@ -2,9 +2,8 @@ import React, { useState, useMemo } from "react";
 import useFetch from "../hooks/useFetch";
 import UserList from "../components/UserList";
 import CustomPagination from "../components/CustomPagination";
-import SearchBar from "../components/SearchBar";
 import SortButton from "../components/SortButton";
-import Navbar from "../components/Navbar";
+import NavBar from "../components/Navbar";
 const HomePage = () => {
   const {
     data: users,
@@ -45,9 +44,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Navbar>
-        <SearchBar onSearch={setSearchQuery} />
-      </Navbar>
+      <NavBar onSearch={setSearchQuery} />
       <UserList users={paginatedUsers}>
         <SortButton
           onSort={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
